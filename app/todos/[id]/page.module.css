@@ -1,0 +1,55 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 180px;
+  text-align: center;
+  padding: 0.75rem;
+  margin-right: 20px;
+  position: relative;
+}
+
+.todo-title {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.todo-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  margin-right: 10px;
+}
+
+a.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.line {
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.25;
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+}

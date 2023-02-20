@@ -1,0 +1,40 @@
+.todo {
+  display: grid;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  padding: 0.75rem;
+  margin-right: 20px;
+  position: relative;
+}
+
+.todo-title {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.todo-description {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 0.75rem;
+  bottom: 0.75rem;
+}
+
+.line {
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.25;
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+}

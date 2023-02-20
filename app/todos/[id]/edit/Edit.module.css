@@ -1,0 +1,10 @@
+.title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+textarea.description {
+  min-height: 150px !important;
+  width: 100%;
+}
