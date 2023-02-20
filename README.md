@@ -22,7 +22,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## To Setup Database locally
+## To Setup Database locally ([Pocketbase](https://pocketbase.io/))
 - Open a second CLI terminal panel on your IDE, and type `./pocketbase serve`
 - Press `Enter` to run the DB locally
 - Open a browser and paste this URL to run admin access to the db `http://127.0.0.1:8090/_/#/collections`
