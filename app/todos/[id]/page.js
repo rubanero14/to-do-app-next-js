@@ -36,8 +36,9 @@ const TodoItem = async ({ params }) => {
       </div>
       <div className="d-flex align-items-center justify-content-center">
         <Card className={styles.todo}>
-          <h3 className={styles["todo-title"]}>{todo.title}</h3>
+          <h3 className={styles["todo-title"]}>Task ID: {todo.id}</h3>
           <hr className={styles.line} />
+          <h6 className={styles["todo-title"]}>{todo.title}</h6>
           <p className={styles["todo-description"]}>{todo.description}</p>
           <div className={styles["icon-wrapper"]}>
             <Link className={styles.link} href={"/todos/" + todo.id + "/edit"}>
