@@ -1,12 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Svg from "@/components/Svg/Svg";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 import styles from "./Delete.module.css";
 
-async function DeletePage(props) {
-  console.log(props.id, props.description, props.title);
+const DeletePage = async (props) => {
+  const [todoId, setId] = useState(props.id);
+
+  console.log(todoId);
   const submitHandler = async (e) => {
     e.preventDefault();
     await fetch("/api/deleteTodo", {
@@ -15,20 +18,19 @@ async function DeletePage(props) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: props.id,
-        title: title,
-        description: description,
+        id: todoId,
       }),
     });
   };
+
   return (
     <>
-      <h1 className={"d-flex " + styles.title}>Task ID: {props.id}</h1>
+      <h1 className={"d-flex " + styles.title}>Task ID: {todoId}</h1>
       <span class="alert-text d-block mb-3">
         Are you sure to delete this task?
       </span>
       <form onSubmit={submitHandler}>
-        <Input type="hidden" inputtype="input" value={props.id} />
+        <Input type="hidden" inputtype="input" value={todoId} />
         <Button className={styles.button} buttonType="button" type="submit">
           <Svg
             className="me-2"
@@ -40,6 +42,6 @@ async function DeletePage(props) {
       </form>
     </>
   );
-}
+};
 
 export default DeletePage;
