@@ -8,8 +8,6 @@ import styles from "./Delete.module.css";
 
 const DeletePage = async (props) => {
   const [todoId, setId] = useState(props.id);
-
-  console.log(todoId);
   const submitHandler = async (e) => {
     e.preventDefault();
     await fetch("/api/deleteTodo", {
