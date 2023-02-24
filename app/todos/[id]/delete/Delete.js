@@ -7,18 +7,28 @@ import Button from "@/components/Button/Button";
 import styles from "./Delete.module.css";
 
 const DeletePage = async (props) => {
-  const [todoId, setId] = useState(props.id);
+  const [todoId, setId] = useState("");
+
+  useEffect(() => {
+    setId(props.id);
+  }, []);
+
+  console.log(todoId);
   const submitHandler = async (e) => {
     e.preventDefault();
-    await fetch("/api/deleteTodo", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: todoId,
-      }),
-    });
+    try {
+      await fetch(
+        `http://127.0.0.1:8090/api/collections/todos/records/${todoId}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

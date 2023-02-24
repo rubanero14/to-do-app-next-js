@@ -20,17 +20,23 @@ async function Todos() {
     <>
       {todos.length > 0 &&
         todos.map((data) => (
-          <Link key={data.id} id={data.id} href={"/todos/" + data.id}>
-            <Card className={styles.todo}>
-              <h3 className={styles["todo-title"]}>{data.title}</h3>
-              <Svg
-                className={styles.icon}
-                title={`View ${data.title}`}
-                viewBox="0 0 512 512"
-                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
-              />
-            </Card>
-          </Link>
+          <div
+            className="col-12 col-md-3 col-lg-2 mb-3"
+            key={data.id}
+            id={data.id}
+          >
+            <Link href={"/todos/" + data.id}>
+              <Card className={styles.todo}>
+                <h3 className={styles["todo-title"]}>{data.title}</h3>
+                <Svg
+                  className={styles.icon}
+                  title={`View ${data.title}`}
+                  viewBox="0 0 512 512"
+                  d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+                />
+              </Card>
+            </Link>
+          </div>
         ))}
     </>
   );

@@ -12,7 +12,7 @@ async function Page() {
         </div>
         <hr className={styles.divider} />
         <div className="col-12">
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="row">
             <Todos />
           </div>
         </div>

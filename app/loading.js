@@ -4,4 +4,4 @@ const Loading = () => {
   return <LoadingSpinner />;
 };
 
-export default LoadingSpinner;
+export default Loading;

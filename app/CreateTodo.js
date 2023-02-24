@@ -28,7 +28,8 @@ const CreateToDo = () => {
   };
   return (
     <div className="row">
-      <div className="col-12">
+      <div className="d-none d-md-block col-12 col-md-4" />
+      <div className="col-12 col-md-4">
         <div className="d-flex justify-content-center align-items-center">
           <Card className={styles.wrapper}>
             <h1 className={styles.title}>Create New Task</h1>
@@ -65,6 +66,7 @@ const CreateToDo = () => {
           </Card>
         </div>
       </div>
+      <div className="d-none d-md-block col-12 col-md-4" />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 .card {
+  display: inline-block;
   background: #222;
   border-radius: 5px;
   color: #ccc;
